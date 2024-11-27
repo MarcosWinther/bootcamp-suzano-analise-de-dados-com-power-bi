@@ -211,3 +211,110 @@
 
 - **Generalização/Especialização** é usada quando há uma hierarquia e queremos organizar entidades "filhas" especializadas de uma entidade "pai".
 - **Union Type/Categorização** é a melhor opção quando precisamos agrupar entidades distintas (sem hierarquia) em uma categoria unificada, representando objetos de diferentes tipos que compartilham uma funcionalidade comum.
+
+
+## 📁 Decisões de Design de Banco de Dados
+
+- O design de um banco de dados envolve decisões estratégicas para representar os dados da maneira mais eficiente e organizada possível. 
+- Aqui estão alguns guias de decisão:
+
+### Guideline (Diretrizes)
+
+1. **Subclasses/Superclasses: Acurácia vs Desordem:**
+	- O uso de subclasses e superclasses aumenta a acurácia da modelagem de dados, mas também pode levar à complexidade ou "desordem" no diagrama. 
+	- É importante equilibrar detalhamento e simplicidade.
+
+2. **Merge de Subclasse em uma Superclasse:**
+	- Se as subclasses têm poucos atributos específicos ou não possuem relacionamentos exclusivos, pode ser mais simples unir as subclasses em uma única superclasse. 
+	- Isso reduz a complexidade do modelo.
+
+3. **Union Types: Evitados por Padrão:**
+	- Embora úteis em cenários específicos, os Union Types são evitados por padrão porque podem dificultar a consulta e o gerenciamento dos dados.
+
+4. **Escolhas Guiadas pelo Mini-Mundo:**
+	- O design deve refletir o "mini-mundo" que o banco de dados modela. 
+	- O entendimento detalhado do domínio de negócio é essencial para tomar decisões coerentes.
+
+
+## 📁 Representando por UML
+
+- A **UML (Unified Modeling Language)** é uma ferramenta popular para modelagem de dados e sistemas. 
+- No contexto de bancos de dados, foca-se principalmente no diagrama de classes, que destaca as estruturas e relações.
+
+1. **Foco na Modelagem de Dados:**
+	- Os diagramas de classe em UML mostram como os dados estão organizados, incluindo atributos, relacionamentos e heranças.
+
+2. **Classes Concretas:**
+	- Representam entidades reais no banco de dados, como **Cliente**, **Pedido**, ou **Produto**.
+
+3. **Nomenclatura:**
+	- **Classe Base:** É a superclasse ou entidade geral, como **Pessoa**.
+	- **Classes Folha:** São as subclasses ou especializações, como **Aluno** ou **Professor**.
+
+
+## 📁 Terminologias Alternativas
+
+### Knowledge Representation (KR)
+
+1. **Definição:**
+	- Representação de conhecimento refere-se a uma forma de modelar informações de forma abrangente, incluindo regras, conhecimento espacial, temporal e mecanismos de inferência.
+
+2. **Características:**
+	- **Modelagem semântica:** Capta o significado dos dados e seus contextos.
+	- **Abrangente:** Vai além da estrutura de dados, incluindo lógica e regras de negócio.
+	- **Mistura instâncias e esquemas:** Representa tanto os dados (instâncias) quanto a estrutura (esquema).
+
+3. **Similaridades com Modelagem de Dados:**
+	- Ambas utilizam abstração para identificar componentes essenciais e provêm recursos para organizar informações de maneira estruturada.
+
+
+### Ontologia
+
+1. **Definição:**
+	- Uma ontologia descreve formalmente um domínio, incluindo suas propriedades, conceitos e relações. 
+	- Ela fornece um contexto detalhado para o banco de dados.
+
+2. **Descrição:**
+	- **Thesaurus:** Mapeia relacionamentos e conceitos.
+	- **Taxonomia:** Define hierarquias e classificações de conceitos.
+	- **Esquema Detalhado:** Descreve os conceitos e suas propriedades.
+	- **Lógica Teórica:** Utiliza lógica matemática para formalizar conceitos e relações.
+
+3. **Função no Banco de Dados:**
+	- Alimenta o BD com informações contextuais sobre o domínio, permitindo consultas mais inteligentes e consistentes.
+
+
+## 📁 Conceitos Abstratos
+
+1. **Classificação e Instanciação:**
+	- Atribui objetos ou entidades a tipos ou classes. 
+	- Exemplo: o objeto "Maria" é uma instância da classe **Pessoa**.
+
+2. **Identificação:**
+	- Processo de atribuir um identificador único a cada entidade, como o **CPF** para **Pessoa**.
+
+3. **Especialização e Generalização:**
+	- Refinam dados em subclasses (especialização) ou agrupam características comuns em superclasses (generalização).
+
+4. **Agregação e Associação:**
+	- **Agregação:** Modela relações "parte de" entre entidades. Exemplo: **Carro** tem partes como **Motor** e **Rodas**.
+	- **Associação:** Relaciona entidades sem hierarquia de composição. Exemplo: **Cliente** e **Pedido**.
+
+
+## 📁 Generalização/Especialização vs Ontologia
+
+### Generalização/Especialização:
+
+- Focam na hierarquia e organização dos dados no banco.
+- Útil para modelar dados com atributos e relacionamentos claramente definidos.
+
+
+### Ontologia:
+
+- Vai além da estrutura, incorporando regras, lógica e contexto.
+- Ideal para sistemas que precisam de maior compreensão semântica, como sistemas de IA ou consultas complexas.
+
+
+#### Conclusão:
+
+- A escolha entre generalização/especialização ou ontologia depende da necessidade de simplicidade versus complexidade contextual no sistema.
