@@ -22,7 +22,22 @@ Repositório criado para compartilhar códigos e anotações dos cursos realizad
 
 ## 📚📚 Cursos realizados nesse Bootcamp presentes nesse repositório:
 
-**Sendo implementando**
+1. Introdução a Banco de Dados;
+2. Sistemas de Gerenciamento de Banco de Dados;
+3. Modelagem de Dados para Banco de Dados;
+4. Arquitetura de Banco de Dados;
+5. Fundamentos de Modelagem e Projeto de Banco de Dados;
+6. Modelo de Entidade e Relacionamento de Banco de Dados;
+7. Modelo Relacionamento de Entidade Aprimorado;
+8. Modelo Relacional e Mapeamento Relacional com Banco de Dados;
+9. Primeiros Passos com SQL;
+10. Explorando Queries com SQL;
+11. Criando Queries com Funções e Cláusulas de Agrupamentos;
+12. Agrupando Registros e Tabelas com Join Statement
+
+
+- **Observação:** 
+   - **Os Cursos de Power BI** são os mesmos cursos de outro Bootcamp que fiz na [DIO](https://www.dio.me/), eles se encontram nesse [repositório](https://github.com/MarcosWinther/bootcamp-nttdata-engenharia-de-dados-com-python).
 
 
 ## 👨‍💻 Expert
